@@ -1,0 +1,37 @@
+swipe:
+  3:
+    left:
+      command: exec sway focus right
+    right:
+      command: exec sway focus left
+    up:
+      command: exec sway focus down
+    down:
+      command: exec sway focus up
+  4:
+    left:
+     command: exec sway workspace next
+    right:
+      command: exec sway workspace prev
+    up:
+      command: exec sway fullscreen toggle
+    down:
+      command: exec sway floating toggle
+pinch:
+  in:
+    command: 'xdotool key ctrl+plus'
+  out:
+     command: 'xdotool key ctrl+minus'
+
+threshold:
+  swipe: 0.4
+  pinch: 0.2
+
+interval:
+  swipe: 0.5
+  pinch: 0.1
+plugin: 
+    inputs:
+          libinput_command_input:
+          enable-tap: true
+          verbose: true
